@@ -36,41 +36,41 @@ export class Form extends Component {
     render() {
         const { name, email, message } = this.state;
         return (
-            <div className="card card-body mt-4 mb-4">
-                <h2 className="text-center">Add A New Lead</h2>
-                <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
-                        <label>Name</label>
+            <div className="card card-body mt-4 mb-5 shadow">
+                <h1 className="text-center">Add A New Lead</h1>
+                <form onSubmit={ this.onSubmit }>
+                    <div className="form-group input-group mt-4 px-5">
                         <input
-                            className="form-control"
+                            className="form-control form-input"
+                            placeholder="Name"
                             type="text"
                             name="name"
                             onChange={ this.onChange }
                             value={ name }
                         />
                     </div>
-                    <div className="form-group">
-                        <label>Email</label>
+                    <div className="form-group input-group mt-4 px-5">
                         <input
-                            className="form-control"
+                            className="form-control form-input"
+                            placeholder="Email"
                             type="email"
                             name="email"
                             onChange={ this.onChange }
                             value={ email }
                         />
                     </div>
-                    <div className="form-group">
-                        <label>Message</label>
+                    <div className="form-group input-group mt-4 px-5">
                         <textarea
-                            className="form-control"
+                            className="form-control form-input"
+                            placeholder="Message"
                             type="text"
                             name="message"
                             onChange={ this.onChange }
                             value={ message }
                         />
                     </div>
-                    <div className="form-group text-center">
-                        <button type="submit" name="submitBtn" className="btn btn-primary rounded mt-3">
+                    <div className="form-group text-center mt-5">
+                        <button type="submit" name="submitBtn" className="btn btn-primary rounded">
                             Submit
                         </button>
                     </div>

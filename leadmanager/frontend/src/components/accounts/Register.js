@@ -42,55 +42,55 @@ export class Register extends Component {
 
         return (
             <div className="col-md-6 m-auto">
-                <div className="card card-body mt-5">
-                    <h2 className="text-center">Register</h2>
+                <div className="card card-body mt-5 shadow">
+                    <h1 className="text-center mt-4">Register</h1>
                     <form onSubmit={ this.onSubmit }>
-                        <div className="form-group">
-                            <label>Username</label>
+                        <div className="form-group input-group mt-4 px-5">
                             <input
                                 type="text"
-                                className="form-control"
+                                className="form-control form-input"
+                                placeholder="Username"
                                 name="username"
                                 onChange={ this.onChange }
                                 value={ username }
                             />
                         </div>
-                        <div className="form-group">
-                            <label>Email</label>
+                        <div className="form-group input-group mt-4 px-5">
                             <input
                                 type="email"
-                                className="form-control"
+                                className="form-control form-input"
+                                placeholder="Email"
                                 name="email"
                                 onChange={ this.onChange }
                                 value={ email }
                             />
                         </div>
-                        <div className="form-group">
-                            <label>Password</label>
+                        <div className="form-group input-group mt-4 px-5">
                             <input
                                 type="password"
-                                className="form-control"
+                                className="form-control form-input"
+                                placeholder="Password"
                                 name="password"
                                 onChange={ this.onChange }
                                 value={ password }
                             />
                         </div>
-                        <div className="form-group">
-                            <label>Confirm Password</label>
+                        <div className="form-group input-group mt-4 px-5">
                             <input
                                 type="password"
-                                className="form-control"
+                                className="form-control form-input"
+                                placeholder="Repeat Password"
                                 name="password2"
                                 onChange={ this.onChange }
                                 value={ password2 }
                             />
                         </div>
-                        <div className="form-group">
-                            <button type="submit" className="btn btn-primary">
+                        <div className="form-group text-center mt-5">
+                            <button type="submit" className="btn btn-primary rounded">
                                 Register
                             </button>
                         </div>
-                        <p>
+                        <p className="text-center mt-4">
                             Already have an account? <Link to="/login">Login</Link>
                         </p>
                     </form>

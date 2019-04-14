@@ -17,7 +17,7 @@ export class Leads extends Component {
     render() {
         return (
             <Fragment>
-                <h2 className="text-center mb-3">Leads</h2>
+                <h1 className="text-center mb-3">Leads</h1>
                 <table className="table table-striped">
                     <thead>
                         <tr>
@@ -37,7 +37,7 @@ export class Leads extends Component {
                                     <td>{ lead.email }</td>
                                     <td>{ lead.message }</td>
                                     <td>
-                                        <button className="btn btn-danger btn-sm" onClick={ this.props.deleteLead.bind(this, lead.id) }>
+                                        <button className="btn btn-danger btn-sm rounded" onClick={ this.props.deleteLead.bind(this, lead.id) }>
                                             Delete
                                         </button>
                                     </td>
