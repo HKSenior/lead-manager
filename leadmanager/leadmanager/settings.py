@@ -4,11 +4,11 @@ from decouple import config, Csv
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = config('DEBUG', cast=bool)
+DEBUG = os.environ.get('DEBUG') == 'True'
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1:8000').split(', ')
 
 
 # Application definition
@@ -97,7 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = os.environ.get('TIME_ZONE')
 
 USE_I18N = True
 
