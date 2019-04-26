@@ -18,7 +18,7 @@ export class Leads extends Component {
         return (
             <Fragment>
                 <h1 className="text-center mb-3">Leads</h1>
-                <table className="table table-striped">
+                <table className="table table-striped mb-5">
                     <thead>
                         <tr>
                             <th>ID</th>
