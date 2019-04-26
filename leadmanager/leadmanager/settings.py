@@ -66,6 +66,7 @@ WSGI_APPLICATION = 'leadmanager.wsgi.application'
 
 # Database
 
+DATABASES = {}
 DATABASES['default'] = dj_database_url.config(
     os.environ.get('DATABASE_URL'),
     conn_max_age=600,
